@@ -1,5 +1,5 @@
-using FilmApi.Persistence;
 using FilmApi.Application;
+using FilmApi.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +11,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddPersistence(builder.Configuration);
 builder.Services.AddApplication();
+builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
+
 
 var app = builder.Build();
 

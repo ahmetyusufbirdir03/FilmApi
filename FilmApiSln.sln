@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmApi.Infrastructure", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmApi.WebApi", "WebApi\FilmApi.WebApi\FilmApi.WebApi.csproj", "{DE674D21-76B6-4B59-AC99-C3922EA11457}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmApi.Persistence", "..\..\FilmApi\FilmApiSln\Infrastructure\FilmApi.Persistence\FilmApi.Persistence.csproj", "{A67360F3-FA92-4567-95CF-EE4B35F4E8BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmApi.Persistence", "Infrastructure\FilmApi.Persistence\FilmApi.Persistence.csproj", "{A67360F3-FA92-4567-95CF-EE4B35F4E8BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
