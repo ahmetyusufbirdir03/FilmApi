@@ -19,7 +19,8 @@ public class GetAllMoviesQueryHandler : IRequestHandler<GetAllMoviesQueryRequest
         var movies = await unitOfWork.GetGenericRepository<Movie>().GetAllAsync();
 
         var response = mapper.Map<IList<GetAllMoviesQueryResponse>>(movies);
-        return response;    
+        return response;
+        //throw new Exception("HATA MESAJI");
 
     }
 }
