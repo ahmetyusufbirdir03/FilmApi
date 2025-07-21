@@ -1,4 +1,5 @@
 using FilmApi.Application;
+using FilmApi.Application.Exceptions;
 using FilmApi.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +24,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.ConfigureExceptionHandlingMiddleware();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
