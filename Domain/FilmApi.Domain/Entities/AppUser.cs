@@ -6,7 +6,7 @@ namespace FilmApi.Domain.Entities
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
         public string FullName => string.Join(" ", FirstName, LastName);
-        public DateTime RegistrationDate { get; set; }
+        public DateTime RegistrationDate { get; set; } = DateTime.UtcNow;
 
     }
 }

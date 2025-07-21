@@ -9,7 +9,7 @@ namespace FilmApi.Application
         {
             var assembly = Assembly.GetExecutingAssembly();
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
-            services.AddAutoMapper(typeof(MappingProfile).Assembly);
+            services.AddAutoMapper(assembly);
         }
     }
 }

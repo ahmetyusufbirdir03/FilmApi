@@ -5,9 +5,9 @@ using FilmApi.Application.Features.Movies.Queries.GetAllMovies;
 using FilmApi.Application.Features.Movies.Queries.GetMovieById;
 using FilmApi.Domain.Entities;
 
-public class MappingProfile : Profile
+public class MovieMappingProfile : Profile
 {
-    public MappingProfile()
+    public MovieMappingProfile()
     {
         CreateMap<Movie, GetAllMoviesQueryResponse>();
         CreateMap<Movie, GetMovieByIdQueryRequest>();

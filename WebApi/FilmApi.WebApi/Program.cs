@@ -11,7 +11,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddPersistence(builder.Configuration);
 builder.Services.AddApplication();
-builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
+builder.Services.AddAutoMapper(typeof(MovieMappingProfile).Assembly);
 
 
 var app = builder.Build();

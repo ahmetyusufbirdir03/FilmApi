@@ -18,8 +18,4 @@
     <ProjectReference Include="..\..\Domain\FilmApi.Domain\FilmApi.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Mappings\" />
-  </ItemGroup>
-
 </Project>
