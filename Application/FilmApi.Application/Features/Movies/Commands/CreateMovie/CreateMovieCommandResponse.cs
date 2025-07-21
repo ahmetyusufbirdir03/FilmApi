@@ -1,8 +1,8 @@
 ﻿using FilmApi.Domain.Enums;
 
-namespace FilmApi.Application.Features.Movies.Queries.GetAllMovies;
+namespace FilmApi.Application.Features.Movies.Commands.CreateMovie;
 
-public class GetAllMoviesQueryResponse 
+public class CreateMovieCommandResponse
 {
     public string Title { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
