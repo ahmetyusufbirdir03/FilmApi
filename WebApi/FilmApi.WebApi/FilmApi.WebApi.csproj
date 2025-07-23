@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\FilmApi.Infrastructure\FilmApi.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Infrastructure\FilmApi.Persistence\FilmApi.Persistence.csproj" />
   </ItemGroup>
 

@@ -16,7 +16,7 @@ public class GetAllUsersQueryHandler : IRequestHandler<GetAllUsersQueryRequest, 
     }
     public async Task<IList<GetAllUsersQueryResponse>> Handle(GetAllUsersQueryRequest request, CancellationToken cancellationToken)
     {
-        var users = await unitOfWork.GetGenericRepository<AppUser>().GetAllAsync();
+        var users = await unitOfWork.GetGenericRepository<User>().GetAllAsync();
 
         var response = mapper.Map<IList<GetAllUsersQueryResponse>>(users);
         return response;

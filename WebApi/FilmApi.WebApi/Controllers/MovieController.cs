@@ -5,6 +5,7 @@ using FilmApi.Application.Features.Movies.Queries.GetAllMovies;
 using FilmApi.Application.Features.Movies.Queries.GetMovieById;
 using FilmApi.WebApi.Abstraction;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FilmApi.WebApi.Controllers
@@ -19,6 +20,7 @@ namespace FilmApi.WebApi.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetAllMovies()
         {
             var response = await mediator.Send(new GetAllMoviesQueryRequest());
@@ -26,6 +28,7 @@ namespace FilmApi.WebApi.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> GetMovieById(Guid id)
         {
             var response = await mediator.Send(new GetMovieByIdQueryRequest { Id = id });
@@ -33,6 +36,7 @@ namespace FilmApi.WebApi.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> CreateMovie(CreateMovieCommandRequest request)
         {
             var response = await mediator.Send(request);
@@ -40,6 +44,7 @@ namespace FilmApi.WebApi.Controllers
         }
 
         [HttpPatch]
+        [Authorize]
         public async Task<IActionResult> UpdateMovie(UpdateMovieCommandRequest request)
         {
             var response = await mediator.Send(request);
@@ -47,6 +52,7 @@ namespace FilmApi.WebApi.Controllers
         }
         
         [HttpDelete]
+        [Authorize]
         public async Task<IActionResult> DeleteMovie(DeleteMovieCommandRequest request)
         {
             var response = await mediator.Send(request);

@@ -9,10 +9,10 @@ public class UserMappingProfile : Profile
 {
     public UserMappingProfile()
     {
-        CreateMap<CreateUserCommandRequest, AppUser>();
-        CreateMap<UpdateUserCommandRequest, AppUser>();
-        CreateMap<AppUser, GetAllUsersQueryResponse>();
-        CreateMap<AppUser, GetUserByIdQueryResponse>();
+        CreateMap<CreateUserCommandRequest, User>();
+        CreateMap<UpdateUserCommandRequest, User>();
+        CreateMap<User, GetAllUsersQueryResponse>();
+        CreateMap<User, GetUserByIdQueryResponse>();
     }
 }
 

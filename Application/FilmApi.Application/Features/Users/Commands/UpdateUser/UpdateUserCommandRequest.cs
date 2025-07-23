@@ -25,14 +25,14 @@ public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommandRequest
 
     public async Task<string> Handle(UpdateUserCommandRequest request, CancellationToken cancellationToken)
     {
-        AppUser? user = await unitOfWork.GetGenericRepository<AppUser>().GetByIdAsync(request.Id);
+        User? user = await unitOfWork.GetGenericRepository<User>().GetByIdAsync(request.Id);
         if (user is null) 
         { 
             return "User could not be found!"; 
         }
 
         mapper.Map(request, user);
-        await unitOfWork.GetGenericRepository<AppUser>().UpdateAsync(user);
+        await unitOfWork.GetGenericRepository<User>().UpdateAsync(user);
         await unitOfWork.SaveChangesAsync();
         return "User is updated successfully!";
 

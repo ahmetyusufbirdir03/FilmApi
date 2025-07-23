@@ -1,13 +1,13 @@
-﻿namespace FilmApi.Application.Errors;
+﻿namespace FilmApi.Application.Response;
 
-public class ErrorResponse<T>
+public class Response<T>
 {
     public bool IsSuccess { get; set; }
     public string? Message { get; set; }
     public int StatusCode { get; set; }
     public T? Data { get; set; }
 
-    public static ErrorResponse<T> Success(T? data = default, string? message = null, int statusCode = 200)
+    public static Response<T> Success(T? data, string? message = null, int statusCode = 200)
         => new()
         {
             IsSuccess = true,
@@ -16,7 +16,7 @@ public class ErrorResponse<T>
             StatusCode = statusCode
         };
 
-    public static ErrorResponse<T> Failure(string message, int statusCode = 400)
+    public static Response<T> Failure(string message, int statusCode = 400)
         => new()
         {
             IsSuccess = false,

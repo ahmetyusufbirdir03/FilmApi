@@ -22,70 +22,6 @@ namespace FilmApi.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("FilmApi.Domain.Entities.AppUser", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("RegistrationDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
-                });
-
             modelBuilder.Entity("FilmApi.Domain.Entities.Movie", b =>
                 {
                     b.Property<Guid>("Id")
@@ -117,49 +53,311 @@ namespace FilmApi.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("1ea451e8-e763-446c-adc5-0a84f58f1d64"),
-                            Description = "Tv domates explicabo amet değerli tempora çorba dolore ışık. Mi çakıl odio koyun vitae sıradanlıktan beatae. Et ab için dolore voluptatem duyulmamış.",
-                            Director = "Erinç Menemencioğlu",
+                            Id = new Guid("2186d75c-fb5d-49d6-bf28-fd8fc25ae6ab"),
+                            Description = "Dolorem ki minima ipsa gazete vitae de dolayı. Ki adanaya bilgiyasayarı dolores ipsum sandalye filmini ut. Aperiam değirmeni yapacakmış accusantium voluptatem et orta aliquam ama. Yapacakmış dicta camisi. Quia aperiam beatae. Biber lambadaki quia praesentium nisi amet sıfat.",
+                            Director = "Balta Örge",
+                            Genre = 8,
+                            ReleaseDate = new DateTime(2020, 5, 6, 18, 49, 10, 814, DateTimeKind.Local).AddTicks(3992),
+                            Title = "Masaya camisi aut."
+                        },
+                        new
+                        {
+                            Id = new Guid("d3fc816a-1959-44cd-8265-53a790dcd1c2"),
+                            Description = "Şafak cesurca aut vel ki amet voluptatem dolores balıkhaneye. Sıradanlıktan beğendim totam un layıkıyla rem. Voluptatem sed incidunt duyulmamış yazın gülüyorum açılmadan umut. Ki ışık oldular ea ekşili sıla neque tempora nemo kapının. Neque camisi sunt velit. Dışarı voluptatem eum.",
+                            Director = "Altmışkara Elçiboğa",
+                            Genre = 11,
+                            ReleaseDate = new DateTime(2019, 6, 5, 5, 39, 15, 572, DateTimeKind.Local).AddTicks(7581),
+                            Title = "Mi consectetur hesap."
+                        },
+                        new
+                        {
+                            Id = new Guid("bfe8628c-7fa4-4db1-95e3-174cd84c54f3"),
+                            Description = "Ea in ve aliquid balıkhaneye corporis patlıcan praesentium. Quam tempora adresini. Un odio aut ea nostrum düşünüyor aspernatur masanın. Bilgiyasayarı dolorem voluptatem.",
+                            Director = "Çağrı Akman",
+                            Genre = 6,
+                            ReleaseDate = new DateTime(2024, 8, 30, 16, 26, 8, 20, DateTimeKind.Local).AddTicks(5098),
+                            Title = "Quia magni kulu."
+                        },
+                        new
+                        {
+                            Id = new Guid("2a703816-f826-4be6-8201-0ffec16fcd34"),
+                            Description = "Sit öyle ex yaptı. Ducimus karşıdakine çarpan. Dolor lambadaki patlıcan ötekinden ullam gül aut bundan ullam.",
+                            Director = "Çiçem Arslanoğlu",
                             Genre = 4,
-                            ReleaseDate = new DateTime(2021, 1, 31, 7, 16, 18, 824, DateTimeKind.Local).AddTicks(4893),
-                            Title = "Tempora explicabo magni."
+                            ReleaseDate = new DateTime(2018, 8, 22, 5, 39, 26, 577, DateTimeKind.Local).AddTicks(1289),
+                            Title = "Aut suscipit explicabo."
                         },
                         new
                         {
-                            Id = new Guid("fc773e40-681a-41af-b592-224e31016116"),
-                            Description = "Tv kapının balıkhaneye. Sarmal sıfat ve sıla quia ratione kapının consequatur magnam kutusu. Nihil mutlu filmini ducimus ea adresini gidecekmiş ona ipsam.",
-                            Director = "Beçkem Akgül",
-                            Genre = 7,
-                            ReleaseDate = new DateTime(2023, 3, 28, 6, 51, 6, 751, DateTimeKind.Local).AddTicks(2280),
-                            Title = "Odio çarpan eos."
-                        },
-                        new
-                        {
-                            Id = new Guid("1d3a4cc6-2c4c-4bc5-953c-a3227308a111"),
-                            Description = "Dağılımı laboriosam de. Ötekinden neque consectetur laboriosam sıfat minima öyle. Nostrum nemo koştum ut neque.",
-                            Director = "Çiğdem Erberk",
-                            Genre = 8,
-                            ReleaseDate = new DateTime(2017, 7, 2, 1, 6, 20, 403, DateTimeKind.Local).AddTicks(7459),
-                            Title = "Biber molestiae voluptatem."
-                        },
-                        new
-                        {
-                            Id = new Guid("c4f85cd2-7400-4e0f-9fc4-3560d1162bdb"),
-                            Description = "Non layıkıyla duyulmamış enim sıradanlıktan rem ad beatae vel dışarı. Lambadaki adipisci consectetur duyulmamış. Gidecekmiş quaerat biber consequatur patlıcan voluptatem quae adipisci aut. İpsam nostrum ea un layıkıyla doğru iure doğru.",
-                            Director = "Altıntay Körmükçü",
-                            Genre = 8,
-                            ReleaseDate = new DateTime(2024, 3, 18, 6, 0, 37, 812, DateTimeKind.Local).AddTicks(3472),
-                            Title = "Biber quia masanın."
-                        },
-                        new
-                        {
-                            Id = new Guid("47fc5eb6-c7e0-4aac-8e9b-f4db504a49e7"),
-                            Description = "Masanın aut koyun aliquid karşıdakine quam. Nisi ducimus non dolorem magni. Suscipit sit sıfat eius alias okuma suscipit. Eve gidecekmiş alias consectetur eius. Doğru olduğu kapının.",
-                            Director = "Aydın Akgül",
-                            Genre = 10,
-                            ReleaseDate = new DateTime(2018, 10, 28, 21, 24, 25, 30, DateTimeKind.Local).AddTicks(1811),
-                            Title = "İpsa ullam dolorem."
+                            Id = new Guid("12808e1a-c069-4992-b85e-c247d7a9ec52"),
+                            Description = "Ötekinden değirmeni ullam yapacakmış veritatis. Kulu sıla fugit sandalye sandalye ea. Quia et aliquid qui aliquid commodi.",
+                            Director = "Azak Kasapoğlu",
+                            Genre = 6,
+                            ReleaseDate = new DateTime(2021, 3, 18, 1, 3, 6, 561, DateTimeKind.Local).AddTicks(5857),
+                            Title = "Gitti nisi vel."
                         });
+                });
+
+            modelBuilder.Entity("FilmApi.Domain.Entities.Role", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles", (string)null);
+                });
+
+            modelBuilder.Entity("FilmApi.Domain.Entities.User", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("RefreshTokenExpiryTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("RoleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Guid>", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("RoleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
+                {
+                    b.HasOne("FilmApi.Domain.Entities.Role", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
+                {
+                    b.HasOne("FilmApi.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
+                {
+                    b.HasOne("FilmApi.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Guid>", b =>
+                {
+                    b.HasOne("FilmApi.Domain.Entities.Role", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FilmApi.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
+                {
+                    b.HasOne("FilmApi.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -18,8 +18,8 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommandRequest
 
     public async Task<CreateUserCommandResponse> Handle(CreateUserCommandRequest request, CancellationToken cancellationToken)
     {
-        AppUser? user = mapper.Map<AppUser>(request);
-        await unitOfWork.GetGenericRepository<AppUser>().CreateAsync(user);
+        User? user = mapper.Map<User>(request);
+        await unitOfWork.GetGenericRepository<User>().CreateAsync(user);
         return new CreateUserCommandResponse()
         {
             FirstName = user.FirstName,

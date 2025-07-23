@@ -15,13 +15,13 @@ public class DeleteUserCommandHandler : IRequestHandler<DeleteUserCommandRequest
 
     public async Task<string> Handle(DeleteUserCommandRequest request, CancellationToken cancellationToken)
     {
-        AppUser? user = await unitOfWork.GetGenericRepository<AppUser>().GetByIdAsync(request.Id);
+        User? user = await unitOfWork.GetGenericRepository<User>().GetByIdAsync(request.Id);
         if(user is null)
         {
             return "User could not found!";
         }
 
-        await unitOfWork.GetGenericRepository<AppUser>().DeleteAsync(user);
+        await unitOfWork.GetGenericRepository<User>().DeleteAsync(user);
         await unitOfWork.SaveChangesAsync();
         return "User is deleted successfully!";
     }

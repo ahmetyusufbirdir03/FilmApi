@@ -1,8 +1,9 @@
-﻿using MediatR;
+﻿using FilmApi.Application.Response;
+using MediatR;
 
 namespace FilmApi.Application.Features.Movies.Commands.UpdateMovie;
 
-public class UpdateMovieCommandRequest : IRequest<string>
+public class UpdateMovieCommandRequest : IRequest<Response<string>>
 {
     public Guid Id { get; set; }
     public string Title { get; set; } = string.Empty;
